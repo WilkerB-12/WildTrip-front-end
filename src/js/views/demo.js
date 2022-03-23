@@ -16,9 +16,15 @@ export const Demo = () => {
 			</div>
 			<div className="container d-flex justify-content-center row my-3">
 				<div id="form" className="justify-content-center d-flex row p-2">
-					<h1 style={{"paddingTop": "20px", "fontFamily":"Raleway, sans-serif"}}>Nombre de Usuario</h1>
-					<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Nunca uses tu nombre real, mejor usa un apodo 👍</p>
+					<h1 style={{"paddingTop": "20px", "fontFamily":"Raleway, sans-serif"}}>Nombre</h1>
+					<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos aqui tu apellido 🌾</p>
 					<input placeholder="Carlos"></input>
+					<h1 style={{"paddingTop": "20px", "fontFamily":"Raleway, sans-serif"}}>Apellido</h1>
+					<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos aqui tu apellido 🌵</p>
+					<input placeholder="Suarez"></input>
+					<h1 style={{"paddingTop": "20px", "fontFamily":"Raleway, sans-serif"}}>Número de telefono</h1>
+					<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos tu número de telefono para saber que eres una persona real 🤖</p>
+					<input placeholder="Suarez"></input>
 					<h1 style={{"paddingTop": "20px", "fontFamily":"Raleway, sans-serif"}}>Correo electrónico</h1>
 					<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dirección de correo electrónico 📧</p>
 					<input placeholder="Arepa1234@mail.com"></input>
