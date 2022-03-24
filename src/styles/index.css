@@ -12,7 +12,7 @@
     margin-left: 50px;
 }
 .content_of_the_page{
-    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,1));
     margin-top: 50px;
     margin-bottom: 10px;
     margin-left: 100px;

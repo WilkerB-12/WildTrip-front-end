@@ -6,13 +6,23 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="container mx-5">
 				<Link to="/">
-					<h1 className="text-navbar" style={{"fontFamily":"Lobster, cursive"}}>Wildtrip</h1>
+					<h1 className="text-navbar" style={{ "fontFamily": "Lobster, cursive" }}>Wildtrip</h1>
 					{/* <img className="icon" src="https://images-eu.ssl-images-amazon.com/images/I/41KOJV21HUL.jpg" /> */}
 				</Link>
-				<div className="nav-item px-2">
-					<Link to="/sing-in">
-						<p className="text-navbar">Registrarse</p>
-					</Link>
+				<div>
+					<li class="nav-item dropdown px-2">
+						<p class="text-navbar dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Registrarme
+						</p>
+						<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+							<Link to="/sing-in-traveler">
+								<li><p class="dropdown-item">Registrarme como usuario</p></li>
+							</Link>
+							<Link to="/sing-in-company">
+							<li><p class="dropdown-item">Registrarme como empresa</p></li>
+							</Link>
+						</ul>
+					</li>
 				</div>
 				<div className="nav-item px-2">
 					<Link to="/log-in">
