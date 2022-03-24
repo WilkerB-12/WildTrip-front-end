@@ -26,7 +26,7 @@ export const Demo = () => {
 						<input placeholder="Opcional"></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos tu número de telefono para saber que eres una persona real 🤖</p>
-						<input placeholder="Suarez"></input>
+						<input placeholder=""></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dirección de correo electrónico 📧</p>
 						<input placeholder="Arepa1234@mail.com"></input>
@@ -36,7 +36,7 @@ export const Demo = () => {
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Confirmar contraseña</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Confírmanos tu contraseña 🔐</p>
 						<input placeholder=""></input>
-						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" type="submit" value="Registrarme"></input>
+						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" type="button" value="Registrarme"></input>
 					</div>
 					<div className="d-flex justify-content-center align-items-center col">
 						<div className="lineas"></div>
