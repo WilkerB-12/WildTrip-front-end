@@ -12,7 +12,7 @@ export const Demo = () => {
 		<div className="content_of_the_page">
 			<div className="container">
 				<h1 style={{ "fontSize": "50px", "fontWeight": "100", "fontFamily": "Spartan, sans-serif" }}>Regístrate</h1>
-				<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif" }}>para obtener funciones nuevas y encontrar la computadora que necesitas 💻✨</p>
+				<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif" }}>para poder interactuar con nuestra comunidad 🌳🍂</p>
 			</div>
 			<div className="container d-flex justify-content-center row my-3">
 				<div id="form" className="justify-content-center d-flex row p-2">

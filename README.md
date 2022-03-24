@@ -1,4 +1,4 @@
-# El sobrino que estudia computación front end 🧐🍷
+# Wildtrip front end 🎒⛺
 
 ### Requirements:
 - Make sure you are using node version 10
