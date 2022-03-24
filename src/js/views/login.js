@@ -15,10 +15,10 @@ return(
 				<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif" }}>para empezar a viajar :) 🌳🍂</p>
                 <div className="container d-flex justify-content-center row my-3">
 					<div id="form" className="justify-content-center d-flex row p-2">
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dirección de correo electrónico 📧</p>
 						<input placeholder="Arepa1234@mail.com"></input>
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}></p>
 						<input placeholder="1234567890 🤡"></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" type="submit" value="Iniciar sesión"></input>
