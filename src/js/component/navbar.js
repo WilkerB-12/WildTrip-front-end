@@ -10,16 +10,16 @@ export const Navbar = () => {
 					{/* <img className="icon" src="https://images-eu.ssl-images-amazon.com/images/I/41KOJV21HUL.jpg" /> */}
 				</Link>
 				<div>
-					<li class="nav-item dropdown px-2">
-						<p class="text-navbar dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<li className="nav-item dropdown px-2">
+						<p className="text-navbar dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Registrarme
 						</p>
-						<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+						<ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
 							<Link to="/sing-in-traveler">
-								<li><p class="dropdown-item">Registrarme como usuario</p></li>
+								<li><p className="dropdown-item">Registrarme como usuario</p></li>
 							</Link>
 							<Link to="/sing-in-company">
-							<li><p class="dropdown-item">Registrarme como empresa</p></li>
+							<li><p className="dropdown-item">Registrarme como empresa</p></li>
 							</Link>
 						</ul>
 					</li>
