@@ -66,7 +66,7 @@ export const SingInCompany = () => {
 			alert("necesita un password")
 			isValid=false
 		}
-		
+
 		if (!isValid) {
 			setValidations(validations)
 		  }
@@ -92,7 +92,7 @@ export const SingInCompany = () => {
 				<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif" }}>para poder ofrecer actividades en la naturaleza 🌳🍂</p>
                 <div className="container d-flex justify-content-center row my-3">
 					<div id="form" className="justify-content-center d-flex row p-2">
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Nombre de la compañia</h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Nombre de la compañia</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Usaremos tu nombre para mostrarlo al publico ⛺</p>
 						<input 
 							placeholder=""
