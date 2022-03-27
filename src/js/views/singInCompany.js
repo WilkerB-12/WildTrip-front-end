@@ -6,84 +6,6 @@ import "../../styles/demo.css";
 
 export const SingInCompany = () => {
 	const { store, actions } = useContext(Context);
-	const [values, setValues]= useState({
-		name_company: "",
-		phone_number:"",
-		address:"",
-		email:"",
-		password:"",
-		password_confirm:""
-	})
-
-	const [validations, setValidations]= useState({
-		name_company: "",
-		phone_number:"",
-		address:"",
-		email:"",
-		password:"",
-		password_confirm:""
-	})
-
-	const handleInputChange = (e)=>{
-		console.log(e.target.name)
-		console.log(e.target.value)
-		setValues({...values, [e.target.name]: e.target.value
-		})
-
-	}
-	const validateAll =()=>{
-		const {name_company, phone_number, address, email, password, password_confirm}= values
-        const validations ={		
-        	name_company: "",
-        	phone_number:"",
-        	address:"",
-        	email:"",
-        	password:"",
-        	password_confirm:""
-		}
-		 let isValid=true
-		 
-		if(!name_company) {
-			alert("necesita nombre de la compañía")
-			isValid=false
-		}
-		if(!phone_number) {
-			alert("necesita número de teléfono")
-			isValid=false
-		}		
-		
-		if(!address) {
-			alert("necesita dirección referencial de la compañía")
-			isValid=false
-		}		
-		
-		if(!email) {
-			alert("necesita un email")
-			isValid=false
-		}		
-		
-		if(!password) {
-			alert("necesita un password")
-			isValid=false
-		}
-
-		if (!isValid) {
-			setValidations(validations)
-		  }
-		  
-    return isValid   
-	}
-
-	const handleSubmit=(e)=>{
-		e.preventDefault()
-		
-		const isValid=validateAll()
-		if(!isValid){
-			return false
-		}
-		console.log(JSON.stringify(values))
-	}
-
 
 	return (
 		<div className="content_of_the_page">
@@ -97,7 +19,7 @@ export const SingInCompany = () => {
 						<input 
 							placeholder=""
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="name_company"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
@@ -105,7 +27,7 @@ export const SingInCompany = () => {
 						<input 
 							placeholder="Suarez"
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="phone_number"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Dirección</h1>
@@ -113,7 +35,7 @@ export const SingInCompany = () => {
 						<input 
 							placeholder=""
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="address"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h1>
@@ -121,7 +43,7 @@ export const SingInCompany = () => {
 						<input 
 							placeholder="Arepa1234@mail.com"
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="email"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h1>
@@ -129,7 +51,7 @@ export const SingInCompany = () => {
 						<input 
 							placeholder="1234567890 🤡"
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="password"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Confirmar contraseña</h1>
@@ -137,14 +59,15 @@ export const SingInCompany = () => {
 						<input 
 							placeholder=""
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="password_confirm"
 
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 						 	type="button" 
+							resource="/sing-in-company"
 						 	value="Registrar mi compañia"
-							onClick={handleSubmit}
+							onClick={actions.handleSubmit}
 						 ></input>
 					</div>
 				</div>
