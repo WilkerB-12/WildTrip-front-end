@@ -11,6 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { SingInCompany } from "./views/singInCompany";
 import { Login } from "./views/login";
+import { Profile } from "./views/profile";
 
 //create your first component
 const Layout = () => {
@@ -38,6 +39,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/profile">{/*Falta poner el :id*/}
+							<Profile/>
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

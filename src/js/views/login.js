@@ -21,7 +21,7 @@ return(
 						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}></p>
 						<input placeholder="1234567890 🤡"></input>
-						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" type="submit" value="Iniciar sesión"></input>
+						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" type="button" value="Iniciar sesión"></input>
 					</div>
 				</div>
             </div>

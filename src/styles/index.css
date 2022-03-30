@@ -56,3 +56,12 @@ a{
     margin-right: 5px;
     margin-left: 5px;
 }
+.foto_de_perfil{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 100%;
+}
+.footer-de-la-pagina{
+    height: 100%;
+}
