@@ -65,7 +65,7 @@ export const SingInCompany = () => {
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 						 	type="button" 
-							resource="/sing-in-company"
+							resource="/sign-in-company"
 						 	value="Registrar mi compañia"
 							onClick={actions.handleSubmit}
 						 ></input>
