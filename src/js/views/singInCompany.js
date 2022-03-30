@@ -99,7 +99,7 @@ export const SingInCompany = () => {
 						<input
 							placeholder=""
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="name_company"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
@@ -107,7 +107,7 @@ export const SingInCompany = () => {
 						<input
 							placeholder="Suarez"
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="phone_number"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Dirección</h1>
@@ -115,7 +115,7 @@ export const SingInCompany = () => {
 						<input
 							placeholder=""
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="address"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h1>
@@ -123,7 +123,7 @@ export const SingInCompany = () => {
 						<input
 							placeholder="Arepa1234@mail.com"
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="email"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h1>
@@ -131,7 +131,7 @@ export const SingInCompany = () => {
 						<input
 							placeholder="1234567890 🤡"
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="password"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Confirmar contraseña</h1>
@@ -139,9 +139,8 @@ export const SingInCompany = () => {
 						<input
 							placeholder=""
 							type="text"
-							onChange={handleInputChange}
+							onChange={actions.handleInputChange}
 							name="password_confirm"
-
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 							type="button"
