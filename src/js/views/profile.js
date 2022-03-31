@@ -17,4 +17,29 @@ export const Profile = ({ item }) => {
                     <h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>{"{item.nick}"}</h2>
                     <p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}> {"{item.name}" + "{item.lastname}"}</p>
                 </div>
-            </div>)}
+                <div className="container justify-content-center d-flex row">
+                    <div className="foto_de_perfil">
+                        <img src={"url + `${item.id}.jpg`"}/>
+                    </div>
+                    <h1 className="justify-content-center d-flex" style={{ "fontSize": "50px", "fontWeight": "100", "fontFamily": "Spartan, sans-serif" }}>{"{item.company-name}"}</h1>
+                    <p className="justify-content-center d-flex" style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "10px" }}> {"Instagram:" + " {item.instagram-url}"}</p>
+                    <p className="justify-content-center d-flex" style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "10px" }}> {"Instagram:" + " {item.address}"}</p>
+                    <div className="post">
+                <div className="post_header">
+                    <div><h4>{"item.title"}</h4></div>
+                </div>
+                <div>
+                    <img className="post_imagen_imagen" src={"item.cloudinary-url"}/>
+                </div>
+                <div className="post_text">
+                    <div>
+                        <p>
+                            {"item.description"}
+                        </p>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+            )
+        }

@@ -25,7 +25,7 @@ export const SingInCompany = () => {
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos tu número de telefono para que sepamos que eres una compañia real, y que los viajeros puedan contactarte 🤖📱</p>
 						<input 
-							placeholder="Suarez"
+							placeholder="+58"
 							type="text"
 							onChange={actions.handleInputChange}
 							name="phone_number"
@@ -64,11 +64,11 @@ export const SingInCompany = () => {
 
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
-						 	type="button" 
+							type="button" 
 							resource="/sing-in-company"
-						 	value="Registrar mi compañia"
+							value="Registrar mi compañia"
 							onClick={actions.handleSubmit}
-						 ></input>
+						></input>
 					</div>
 				</div>
             </div>
