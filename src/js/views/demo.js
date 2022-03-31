@@ -74,7 +74,7 @@ export const Demo = () => {
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" 
 							type="button" 
 							value="Registrarme"
-							resource="/sing-in-traveler"
+							resource="/sign-in-traveler"
 					   		onClick={actions.handleSubmit}
 						></input>
 					</div>
