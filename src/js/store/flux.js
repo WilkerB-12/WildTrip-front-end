@@ -2,14 +2,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			values: {
-				name_company: "",
+				company_name: "",
 				phone_number:"",
 				address:"",
 				email:"",
 				password:"",
-				password_confirm:""
+				password_confirm:"",
+				instagram_url:""
 			},
-			baseUrl: "https://localhost:5000",
+			baseUrl: "127.0.0.1:5000",
 				
 			demo: [
 				{
@@ -31,14 +32,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}})
 			},
 			
-			handleSubmit: (e)=>{
+			handleSubmit: (e,resource)=>{
 				e.preventDefault()
 				const actions=getActions()
-				console.log(getStore().values.name_company)
+				console.log(getStore().values)
 				if(actions.validationsSubmit()==false){
 					return false
 				}
-				console.log(JSON.stringify(getStore().values))
+				getActions().Signin(resource)
 			},			
 
 			validationsSubmit: ()=>{	
@@ -73,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			return isValid   
 			},
 
-			Signin: ()=>{
+			Signin: (resource)=>{
 				const postUser=async(resource)=>{
 					let requestOptions={
 						method: 'POST',
