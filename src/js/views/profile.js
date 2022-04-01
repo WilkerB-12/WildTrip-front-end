@@ -33,9 +33,11 @@ export const Profile = ({ item }) => {
                 </div>
                 <div className="post_text">
                     <div>
-                        <p>
+                        <p>{"item.country"}</p>
+                        <p>{"item.state"}</p>
+                        <h6>
                             {"item.description"}
-                        </p>
+                        </h6>
                     </div>
                 </div>
             </div>
