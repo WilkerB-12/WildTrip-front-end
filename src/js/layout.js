@@ -9,7 +9,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { SingInCompany } from "./views/singInCompany";
+import { SignInCompany } from "./views/signInCompany";
 import { Login } from "./views/login";
 import { Profile } from "./views/profile";
 
@@ -32,7 +32,7 @@ const Layout = () => {
 							<Demo />
 						</Route>
 						<Route exact path="/sing-in-company">
-							<SingInCompany />
+							<SignInCompany />
 						</Route>
 						<Route exact path="/log-in">
 							<Login />

@@ -7,10 +7,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				address:"",
 				email:"",
 				password:"",
-				password_confirm:"",
+				cloudinary_url:"",
 				instagram_url:""
 			},
-			baseUrl: "127.0.0.1:5000",
+			password_confirm:"",
+			baseUrl: "http://127.0.0.1:5000",
 				
 			demo: [
 				{
@@ -31,61 +32,64 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({values:{...getStore().values, [e.target.name]: e.target.value
 				}})
 			},
-			
+			handleInputChangePasswordConfirm: (e)=>{
+				setStore({password_confirm:{...getStore().password_confirm, [e.target.name]: e.target.value
+				}})
+			},
 			handleSubmit: (e,resource)=>{
-				e.preventDefault()
+				//e.preventDefault()
 				const actions=getActions()
 				console.log(getStore().values)
-				if(actions.validationsSubmit()==false){
+				if(actions.validationsSubmit(e)==false){
 					return false
 				}
-				getActions().Signin(resource)
+				actions.Signin(resource)
 			},			
 
-			validationsSubmit: ()=>{	
+			validationsSubmit: (e)=>{	
 				let isValid=true 
-				if(getStore().values.name_company==""){
+				if(getStore().values.company_name==""){
 					alert("necesita nombre de la compañía")
 					isValid=false
 				}
-				if(getStore().values.name_company=="") {
+				if(getStore().values.phone_number=="") {
 					alert("necesita número de teléfono")
 					isValid=false
 				}		
 				
-				if(getStore().values.name_company=="") {
+				if(getStore().values.address=="") {
 					alert("necesita dirección referencial de la compañía")
 					isValid=false
 				}		
 				
-				if(getStore().values.name_company=="") {
+				if(getStore().values.email=="") {
 					alert("necesita un email")
 					isValid=false
 				}		
 				
-				if(getStore().values.name_company=="") {
+				if(getStore().values.password=="") {
 					alert("necesita un password")
 					isValid=false
 				}
-				if(getStore().values.name_company=="") {
+				if(getStore().values.password_confirm=="") {
 					alert("necesita confirmar contraseña")
 					isValid=false
 				}
-			return isValid   
+				if(getStore().password_confirm.password_confirm !== getStore().values.password){
+					alert("Las contraseñas no coinciden")
+					isValid=false
+				}
+				return isValid   
 			},
 
-			Signin: (resource)=>{
-				const postUser=async(resource)=>{
-					let requestOptions={
-						method: 'POST',
-						headers: { 'Content-Type':'application/json'},
-						body: JSON.stringify(getStore().values)
-					}
-					const response=await fetch(
-						`${getStore().baseUrl}/${resource}`, requestOptions)
-						
+			Signin: async(resource)=>{	
+				let requestOptions={
+					method: 'POST',
+					headers: { 'Content-Type':'application/json'},
+					body: JSON.stringify(getStore().values)
 				}
-
+				const response=await fetch(
+					`${getStore().baseUrl}${resource}`, requestOptions)	
 			},
 
 			// Use getActions to call a function within a fuction

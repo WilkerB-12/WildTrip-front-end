@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../../styles/demo.css";
 
-export const SingInCompany = () => {
+export const SignInCompany = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -21,7 +21,7 @@ export const SingInCompany = () => {
 							placeholder=""
 							type="text"
 							onChange={actions.handleInputChange}
-							name="name_company"
+							name="company_name"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos tu número de telefono para que sepamos que eres una compañia real, y que los viajeros puedan contactarte 🤖📱</p>
@@ -48,14 +48,14 @@ export const SingInCompany = () => {
 							name="email"
 						></input>
 						<div className="d-flex row">
-							<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Instagram</h1><FontAwesomeIcon icon="fa-brands fa-instagram" />
+							<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Instagram</h1>
 							<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dirección url de tu instagram</p>
 						</div>
 						<input
 							placeholder="Opcional"
 							type="text"
 							onChange={actions.handleInputChange}
-							name="instagram-url"
+							name="instagram_url"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Se recomienda usar mayúsculas y números para más seguridad 🔒</p>
@@ -70,15 +70,16 @@ export const SingInCompany = () => {
 						<input
 							placeholder=""
 							type="text"
-							onChange={actions.handleInputChange}
+							onChange={actions.handleInputChangePasswordConfirm}
 							name="password_confirm"
 
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 							type="button"
-							resource="/sing-in-company"
 							value="Registrar mi compañia"
-							onClick={actions.handleSubmit}
+							onClick={(e)=>{
+								actions.handleSubmit(e,"/sign-in-company")}
+							}
 						></input>
 					</div>
 				</div>
