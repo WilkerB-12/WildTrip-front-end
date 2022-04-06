@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
@@ -68,15 +68,23 @@ export const Demo = () => {
 						<input 
 							placeholder=""
 							type="text"
-							onChange={actions.handleInputChange}
+							onChange={actions.handleInputChangePasswordConfirm}
 							name="password_confirm"						
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" 
 							type="button" 
 							value="Registrarme"
 							resource="/sign-in-traveler"
-					   		onClick={actions.handleSubmit}
-						></input>
+							name="travelers"
+					   		onClick={(e)=>{
+								   actions.handleSubmit(e,"/sign-in-traveler")}
+								}
+								></input>
+								{store.passRegister ?
+							<Redirect to={"/login"}/>
+							:
+							""
+						}
 					</div>
 					<div className="d-flex justify-content-center align-items-center col">
 						<div className="lineas"></div>
@@ -87,4 +95,4 @@ export const Demo = () => {
 			</div>
 		</div>
 	);
-};
+}

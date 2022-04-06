@@ -1,7 +1,11 @@
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			values: {
+				name:"",
+				lastname:"",
+				nickname:"",
 				company_name: "",
 				phone_number:"",
 				address:"",
@@ -12,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			password_confirm:"",
 			baseUrl: "http://127.0.0.1:5000",
+			passRegister: false,
 				
 			demo: [
 				{
@@ -48,20 +53,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			validationsSubmit: (e)=>{	
 				let isValid=true 
-				if(getStore().values.company_name==""){
-					alert("necesita nombre de la compañía")
-					isValid=false
+				if(e.target.name=="companies"){
+					if(getStore().values.company_name==""){
+						alert("necesita nombre de la compañía")
+						isValid=false
+					}
 				}
-				if(getStore().values.phone_number=="") {
-					alert("necesita número de teléfono")
-					isValid=false
-				}		
-				
-				if(getStore().values.address=="") {
-					alert("necesita dirección referencial de la compañía")
-					isValid=false
-				}		
-				
+				if(e.target.name=="travelers") {
+					if(getStore().values.nickname==""){
+						alert("necesita un apodo")
+						isValid=false
+					}
+				}
+					if(getStore().values.phone_number=="") {
+						alert("necesita número de teléfono")
+						isValid=false
+				}							
 				if(getStore().values.email=="") {
 					alert("necesita un email")
 					isValid=false
@@ -89,7 +96,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify(getStore().values)
 				}
 				const response=await fetch(
-					`${getStore().baseUrl}${resource}`, requestOptions)	
+					`${getStore().baseUrl}${resource}`, requestOptions)
+				if(response.status==201){
+					alert("Registro completado")
+					setStore({passRegister:true})
+				}
+				if(response.status==400){ 
+					 const mensaje=await response.json()
+					 alert(mensaje.msg)
+				}
 			},
 
 			// Use getActions to call a function within a fuction

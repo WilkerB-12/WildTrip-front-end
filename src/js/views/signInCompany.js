@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { Context } from "../store/appContext";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -77,10 +77,16 @@ export const SignInCompany = () => {
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 							type="button"
 							value="Registrar mi compañia"
+							name="companies"
 							onClick={(e)=>{
 								actions.handleSubmit(e,"/sign-in-company")}
 							}
 						></input>
+						{store.passRegister ?
+							<Redirect to={"/login"}/>
+							:
+							""
+						}
 					</div>
 				</div>
 			</div>

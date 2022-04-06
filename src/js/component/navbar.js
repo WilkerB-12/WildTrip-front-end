@@ -15,10 +15,10 @@ export const Navbar = () => {
 							Registrarme
 						</p>
 						<ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-							<Link to="/sing-in-traveler">
+							<Link to="/sign-in-traveler">
 								<li><p className="dropdown-item">Registrarme como usuario</p></li>
 							</Link>
-							<Link to="/sing-in-company">
+							<Link to="/sign-in-company">
 								<li><p className="dropdown-item">Registrarme como empresa</p></li>
 							</Link>
 						</ul>
@@ -26,7 +26,7 @@ export const Navbar = () => {
 				</div>
 				<div className="px-2">
 					<div className="nav-item px-2">
-						<Link to="/log-in">
+						<Link to="/login">
 							<p className="text-navbar px-2">Iniciar sesión</p>
 						</Link>
 					</div>
