@@ -105,22 +105,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 			   })	
 			   console.log({ email: getStore().values.email, password: getStore().values.password })  
 			    if(!resp.ok) {
-			   		alert("There was a problem in the login request")
+			   		alert("Hay un problema con la solicitud")
 					   return undefined
 					}
 			    if(resp.status === 401){
-					alert("Invalid credentials")
+					alert("Credencia invalida")
 					return undefined
 			    }
 			    else if(resp.status === 400){
-					alert("Invalid email or password format")
+					alert("Correo o clave enviado")
 					return undefined
 			    }
 			    const data = await resp.json()
 			   // save your token in the localStorage
 			  //also you should set your user into the store using the setStore function
-			    localStorage.setItem("jwt-token", data.token);
-				console.log(data)		  
+			    localStorage.setItem("jwt-token", data.token)		  
 			    return data
 			},
 			// Use getActions to call a function within a fuction
