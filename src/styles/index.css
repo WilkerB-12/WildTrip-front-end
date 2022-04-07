@@ -78,6 +78,9 @@ a{
 .boton-para-crear-post{
     width: 75px;
     height: 75px;
-    background-color: rgb(236, 238, 125);
+    background-color: #fffb8b;
     border-radius: 100%;
+}
+.card{
+    background-color: #fffdbb;
 }
