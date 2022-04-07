@@ -16,7 +16,7 @@ export const Profile = ({ item }) => {
                     <img src={"url + `${item.id}.jpg`"} />
                 </div>
                 <h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>{"{item.nick}"}</h2>
-                <p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}> {"{item.name}" + "{item.lastname}"}</p>
+                <p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}> {"{item.name}" + " {item.lastname}"}</p>
             </div>
             <div className="container justify-content-center d-flex row">
                 <div className="foto_de_perfil">
