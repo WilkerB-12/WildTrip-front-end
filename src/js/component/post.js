@@ -13,7 +13,7 @@ export const Post = ({ item }) => {
                 <div className="list-group-item">
                     <h5 className="card-title">{"{item.company}"}</h5>
                 </div>
-                <img src={"{item.img}"} className="card-img-top" alt="..." />
+                <img src={"{item.cloudinary_url}"} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{"{item.title}"}</h5>
                     <p className="card-text">{"{item.description}"}</p>

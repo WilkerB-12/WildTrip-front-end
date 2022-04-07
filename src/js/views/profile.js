@@ -24,7 +24,8 @@ export const Profile = ({ item }) => {
                 </div>
                 <h1 className="justify-content-center d-flex" style={{ "fontSize": "50px", "fontWeight": "100", "fontFamily": "Spartan, sans-serif" }}>{"{item.company-name}"}</h1>
                 <p className="justify-content-center d-flex" style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "10px" }}> {"Instagram:" + " {item.instagram-url}"}</p>
-                <p className="justify-content-center d-flex" style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "10px" }}> {"Instagram:" + " {item.address}"}</p>
+                <p className="justify-content-center d-flex" style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "10px" }}> {"dirección:" + " {item.address}"}</p>
+                <p className="justify-content-center d-flex" style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "10px" }}> {"item.phone_number:"}</p>
                 <div>
                     <Post/>
                 </div>

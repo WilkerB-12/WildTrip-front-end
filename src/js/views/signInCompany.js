@@ -23,7 +23,7 @@ export const SignInCompany = () => {
 							onChange={actions.handleInputChange}
 							name="company_name"
 						></input>
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos tu número de telefono para que sepamos que eres una compañia real, y que los viajeros puedan contactarte 🤖📱</p>
 						<input
 							placeholder="+58"
@@ -31,7 +31,7 @@ export const SignInCompany = () => {
 							onChange={actions.handleInputChange}
 							name="phone_number"
 						></input>
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Dirección</h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Dirección</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Pon la dirección de la empresa para referenciar 🌎</p>
 						<input
 							placeholder=""
@@ -39,7 +39,7 @@ export const SignInCompany = () => {
 							onChange={actions.handleInputChange}
 							name="address"
 						></input>
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Correo electrónico</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dirección de correo electrónico 📧</p>
 						<input
 							placeholder="Arepa1234@mail.com"
@@ -48,7 +48,7 @@ export const SignInCompany = () => {
 							name="email"
 						></input>
 						<div className="d-flex row">
-							<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Instagram</h1>
+							<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Instagram</h2>
 							<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dirección url de tu instagram</p>
 						</div>
 						<input
@@ -56,6 +56,12 @@ export const SignInCompany = () => {
 							type="text"
 							onChange={actions.handleInputChange}
 							name="instagram_url"
+						></input>
+						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Imagen de perfil </h1>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Coloca el logo de tu empresa 🍃🌴</p>
+						<input
+							placeholder=""
+							type="text"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Se recomienda usar mayúsculas y números para más seguridad 🔒</p>
@@ -78,12 +84,13 @@ export const SignInCompany = () => {
 							type="button"
 							value="Registrar mi compañia"
 							name="companies"
-							onClick={(e)=>{
-								actions.handleSubmit(e,"/sign-in-company")}
+							onClick={(e) => {
+								actions.handleSubmit(e, "/sign-in-company")
+							}
 							}
 						></input>
 						{store.passRegister ?
-							<Redirect to={"/login"}/>
+							<Redirect to={"/login"} />
 							:
 							""
 						}

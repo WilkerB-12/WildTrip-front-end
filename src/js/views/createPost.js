@@ -21,8 +21,20 @@ export const CreatePost = () => {
 							placeholder=""
 							type="text"
 						></input>
-						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Descripción de la publicación </h1>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Descripción de la publicación </h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos una breve descripción de que va tu viaje, asi nuestros usuarios podran saber de que trata, y llames la atención 🍃🌴</p>
+						<input
+							placeholder=""
+							type="text"
+						></input>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Nombre de tu compañá </h2>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca el nombre de tu empresa🎒🍂</p>
+						<input
+							placeholder=""
+							type="text"
+						></input>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Imagen de tu publicación </h2>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca el link de una imagen que quieras poner en la publicación 📷🍃</p>
 						<input
 							placeholder=""
 							type="text"

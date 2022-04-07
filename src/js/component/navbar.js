@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Profile } from "../views/profile";
 
 export const Navbar = () => {
-	let token = true
+	let token = false
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="d-flex mx-5" style={{ "width": "100vw" }}>
