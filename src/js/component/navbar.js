@@ -8,7 +8,6 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="d-flex mx-5" style={{ "width": "100vw" }}>
 
-
 				<Link to="/">
 					<h1 className="text-navbar px-2" style={{ "fontFamily": "Lobster, cursive" }}>Wildtrip</h1>
 					{/* <img className="icon" src="https://images-eu.ssl-images-amazon.com/images/I/41KOJV21HUL.jpg" /> */}
@@ -44,7 +43,7 @@ export const Navbar = () => {
 						<div className="px-2">
 							<div className="nav-item px-2">
 								<Link to="/login">
-									<p className="text-navbar px-2" style={{ "width": "140px" }}>Iniciar sesión</p>
+									<p className="text-navbar px-2" style={{ "width": "140px" }}>Cerrar sesión</p>
 								</Link>
 							</div>
 						</div>

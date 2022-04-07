@@ -29,7 +29,9 @@ return(
 						name="password"
 						onChange={actions.handleInputChange}
 						></input>
-						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" type="button" value="Iniciar sesión" onClick={async(e)=>{
+						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" 
+						type="button" value="Iniciar sesión" 
+						onClick={async(e)=>{
 							let respuesta=await actions.login();
 							if (respuesta){
 								history.push("/")
