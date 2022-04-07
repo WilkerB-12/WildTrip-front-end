@@ -17,19 +17,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			password_confirm:"",
 			baseUrl: "http://127.0.0.1:5000",
 			passRegister: false,
-				
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			logged_User:{
+				token:"",
+				user_id:""
+			},
 		},
 		actions: {
 			//para recibir entradas de inputs de registro
@@ -106,7 +97,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 					 alert(mensaje.msg)
 				}
 			},
-
+			login: async()=>{
+				const resp = await fetch(`${getStore().baseUrl}/token`, { 
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({ email: getStore().values.email, password: getStore().values.password }) 
+			   })	
+			   console.log({ email: getStore().values.email, password: getStore().values.password })  
+			    if(!resp.ok) {
+			   		alert("There was a problem in the login request")
+					   return undefined
+					}
+			    if(resp.status === 401){
+					alert("Invalid credentials")
+					return undefined
+			    }
+			    else if(resp.status === 400){
+					alert("Invalid email or password format")
+					return undefined
+			    }
+			    const data = await resp.json()
+			   // save your token in the localStorage
+			  //also you should set your user into the store using the setStore function
+			    localStorage.setItem("jwt-token", data.token);
+				console.log(data)		  
+			    return data
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
