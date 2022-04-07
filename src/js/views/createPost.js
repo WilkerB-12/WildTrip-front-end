@@ -20,16 +20,23 @@ export const CreatePost = () => {
 						<input
 							placeholder=""
 							type="text"
+							name="title"
+							onChange={actions.handleInputChangePost}
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Descripción de la publicación </h1>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos una breve descripción de que va tu viaje, asi nuestros usuarios podran saber de que trata, y llames la atención 🍃🌴</p>
 						<input
 							placeholder=""
 							type="text"
+							name="description"
+							onChange={actions.handleInputChangePost}
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 							type="button"
 							value="Publicar"
+							onClick={(e)=>{
+								actions.createPost(e,"/posts")}
+							}
 						></input>
 					</div>
 				</div>

@@ -20,7 +20,7 @@ export const SignInCompany = () => {
 						<input
 							placeholder=""
 							type="text"
-							onChange={actions.handleInputChange}
+							onChange={actions.handleInputChangePost}
 							name="company_name"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Número de telefono</h1>
@@ -28,7 +28,7 @@ export const SignInCompany = () => {
 						<input
 							placeholder="+58"
 							type="text"
-							onChange={actions.handleInputChange}
+							onChange={actions.handleInputChangePost}
 							name="phone_number"
 						></input>
 						<h1 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Dirección</h1>

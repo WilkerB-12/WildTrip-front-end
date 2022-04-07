@@ -21,11 +21,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 				token:"",
 				user_id:""
 			},
+			all_post:[],
+			all_companies:[],
+			post:{
+				user_id:"",
+				cloudinary_url: "",
+				city: "",
+				state: "",
+				country: "",
+				title: "",
+				date:"",
+				description: ""	
+				}
 		},
 		actions: {
 			//para recibir entradas de inputs de registro
 			handleInputChange: (e)=>{
 				setStore({values:{...getStore().values, [e.target.name]: e.target.value
+				}})
+			},
+			handleInputChangePost: (e)=>{
+				setStore({post:{...getStore().post, [e.target.name]: e.target.value
 				}})
 			},
 			handleInputChangePasswordConfirm: (e)=>{
@@ -119,31 +135,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 			    const data = await resp.json()
 			   // save your token in the localStorage
 			  //also you should set your user into the store using the setStore function
-			    localStorage.setItem("jwt-token", data.token)		  
+			    localStorage.setItem("jwt-token", data.token)
+				setStore({post:{...getStore().post,user_id:data.user_id}})
 			    return data
 			},
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			createPost: async(e,resource)=>{
+				console.log(getStore().post)	
+				let requestOptions={
+					method: 'POST',
+					headers: { 'Content-Type':'application/json'},
+					body: JSON.stringify(getStore().post)
+				}
+				const response=await fetch(
+					`${getStore().baseUrl}${resource}`, requestOptions)
+				if(response.status==201){
+					alert("Post creado")
+				}
+				if(response.status==400){ 
+					 const mensaje=await response.json()
+					 alert(mensaje.msg)
+				}
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			getPosts: async()=>{
+				const response=await fetch(
+					`${getStore().baseUrl}/posts`
+					
+				)
 			}
 		}
 	};
