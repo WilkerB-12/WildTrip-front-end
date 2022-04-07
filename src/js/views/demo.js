@@ -55,6 +55,12 @@ export const Demo = () => {
 							onChange={actions.handleInputChange}
 							name="email"
 							></input>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Imagen de perfil </h2>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Coloca una foto para que todos puedan verla 🍃🌴</p>
+						<input
+							placeholder=""
+							type="text"
+						></input>
 						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Contraseña</h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Se recomienda usar mayúsculas y números para más seguridad 🔒</p>
 						<input 
