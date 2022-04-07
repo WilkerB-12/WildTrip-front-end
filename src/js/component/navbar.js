@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Profile } from "../views/profile";
 
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
-			<div className="d-flex mx-5">
+			<div className="d-flex mx-5" style={{"width":"100vw"}}>
+
 				<Link to="/">
 					<h1 className="text-navbar px-2" style={{ "fontFamily": "Lobster, cursive" }}>Wildtrip</h1>
 					{/* <img className="icon" src="https://images-eu.ssl-images-amazon.com/images/I/41KOJV21HUL.jpg" /> */}
@@ -27,10 +29,19 @@ export const Navbar = () => {
 				<div className="px-2">
 					<div className="nav-item px-2">
 						<Link to="/login">
-							<p className="text-navbar px-2">Iniciar sesión</p>
+							<p className="text-navbar px-2" style={{"width":"140px"}}>Iniciar sesión</p>
 						</Link>
 					</div>
 				</div>
+
+				<div style={{"width":"100%", "display":"flex", "justifyContent":"end" }}>
+					<Link to="/profile">
+						<div className="foto_de_perfil_navbar">
+							<img src={"url + `${item.id}.jpg`"} />
+						</div>
+					</Link>
+				</div>
+
 			</div>
 		</nav>
 	);

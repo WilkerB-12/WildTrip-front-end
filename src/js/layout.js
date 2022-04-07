@@ -12,6 +12,7 @@ import { Footer } from "./component/footer";
 import { SignInCompany } from "./views/signInCompany";
 import { Login } from "./views/login";
 import { Profile } from "./views/profile";
+import { CreatePost } from "./views/createPost";
 
 //create your first component
 const Layout = () => {
@@ -20,7 +21,6 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -40,8 +40,11 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
-						<Route exact path="/profile">{/*Falta poner el :id*/}
+						<Route exact path="/profile">{/*Falta poner el int:id*/}
 							<Profile/>
+						</Route>
+						<Route exact path="/create-post">
+							<CreatePost/>
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
@@ -50,7 +53,6 @@ const Layout = () => {
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
-		</div>
 	);
 };
 
