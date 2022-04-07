@@ -86,11 +86,6 @@ export const Demo = () => {
 							""
 						}
 					</div>
-					<div className="d-flex justify-content-center align-items-center col">
-						<div className="lineas"></div>
-						<p>o</p>
-						<div className="lineas"></div>
-					</div>
 				</div>
 			</div>
 		</div>
