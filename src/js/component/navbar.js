@@ -11,6 +11,7 @@ export const Navbar = () => {
 					<h1 className="text-navbar px-2" style={{ "fontFamily": "Lobster, cursive" }}>Wildtrip</h1>
 					{/* <img className="icon" src="https://images-eu.ssl-images-amazon.com/images/I/41KOJV21HUL.jpg" /> */}
 				</Link>
+				{token != true ? <div>
 				<div className="px-2">
 					<li className="nav-item dropdown px-2">
 						<p className="text-navbar dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
