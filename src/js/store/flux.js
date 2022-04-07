@@ -159,8 +159,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getPosts: async()=>{
 				const response=await fetch(
 					`${getStore().baseUrl}/posts`
-					
 				)
+				const body=await response.json();
+				if (response.ok){
+					setStore({
+						all_post:body
+					})	
+				}
+			},
+			getCompanies: async()=>{
+				const response=await fetch(
+					`${getStore().baseUrl}/companies`
+				)
+				const body=await response.json();
+				if (response.ok){
+					setStore({
+						all_companies:body
+					})	
+				}
 			}
 		}
 	};
