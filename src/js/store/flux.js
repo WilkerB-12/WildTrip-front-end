@@ -24,14 +24,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			all_post:[],
 			all_companies:[],
 			post:{
-				user_id:"",
 				cloudinary_url: "",
 				city: "",
 				state: "",
 				country: "",
 				title: "",
 				date:"",
-				description: ""	
+				description: ""	,
+				company_name:"",
+				phone_number:""
 				}
 		},
 		actions: {
@@ -151,10 +152,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					`${getStore().baseUrl}${resource}`, requestOptions)
 				if(response.status==201){
 					alert("Post creado")
+					let respuesta="post creado"
+					return respuesta
 				}
 				if(response.status==400){ 
 					 const mensaje=await response.json()
 					 alert(mensaje.msg)
+					 return undefined
 				}
 			},
 			getPosts: async()=>{
