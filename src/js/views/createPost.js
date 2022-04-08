@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link,  useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -7,7 +7,7 @@ import "../../styles/demo.css";
 
 export const CreatePost = () => {
 	const { store, actions } = useContext(Context);
-
+	const history=useHistory();
 	return (
 		<div className="content_of_the_page">
 			<div className="container">
@@ -31,24 +31,48 @@ export const CreatePost = () => {
 							name="description"
 							onChange={actions.handleInputChangePost}
 						></input>
-						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Nombre de tu compañá </h2>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Nombre de tu compañía </h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca el nombre de tu empresa🎒🍂</p>
 						<input
 							placeholder=""
 							type="text"
+							name="company_name"
+							onChange={actions.handleInputChangePost}
+						></input>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Fecha </h2>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca la fecha de tu aventura 📅</p>
+						<input
+							placeholder=""
+							type="text"
+							name="date"
+							onChange={actions.handleInputChangePost}
+						></input>
+						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Teléfono </h2>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca tu teléfono de contacto </p>
+						<input
+							placeholder=""
+							type="text"
+							name="phone_number"
+							onChange={actions.handleInputChangePost}
 						></input>
 						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Imagen de tu publicación </h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca el link de una imagen que quieras poner en la publicación 📷🍃</p>
 						<input
 							placeholder=""
 							type="text"
+							name="cloudinary_url"
+							onChange={actions.handleInputChangePost}
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary"
 							type="button"
 							value="Publicar"
-							onClick={(e)=>{
-								actions.createPost(e,"/posts")}
-							}
+							onClick={async(e)=>{
+								let respuesta= await actions.createPost(e,"/posts");
+								if (respuesta){
+									actions.getPosts()
+									history.push("/")
+								}
+							}}
 						></input>
 					</div>
 				</div>
