@@ -138,7 +138,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			  //also you should set your user into the store using the setStore function
 			    localStorage.setItem("jwt-token", data.token)
 				localStorage.setItem("user_id", data.user_id)
-				setStore({post:{...getStore().post,user_id:data.user_id}})
+				setStore({logged_User:{...getStore().logged_User,user_id:data.user_id}})
+				setStore({logged_User:{...getStore().logged_User,token:data.token}})
 			    return data
 			},
 			createPost: async(e,resource)=>{
@@ -184,6 +185,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 						all_companies:body
 					})	
 				}
+			},
+			removeUser:(e)=>{
+				localStorage.removeItem('jwt-token')
+				setStore({logged_User:{...getStore().logged_User,user_id:""}})
+				setStore({logged_User:{...getStore().logged_User,token:""}})
+			},
+			isAuthenticated:()=>{
+				if(localStorage.getItem('jwt-token')){
+					return true;
+				}
+				return false
 			}
 		}
 	};

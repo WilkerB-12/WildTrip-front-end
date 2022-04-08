@@ -1,11 +1,12 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import { Profile } from "../views/profile";
 import { Context } from "../store/appContext";
 
 
 export const Navbar = () => {
-	let token = true
+	const { store, actions } = useContext(Context);
+	let token=actions.isAuthenticated()
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="d-flex mx-5" style={{ "width": "100vw" }}>
@@ -44,9 +45,11 @@ export const Navbar = () => {
 					<>
 						<div className="px-2">
 							<div className="nav-item px-2">
-								<Link to="/login">
-									<p className="text-navbar px-2" style={{ "width": "140px" }}>Cerrar sesión</p>
-								</Link>
+							<button type="button" className="btn btn-light"
+							onClick={(e)=>{actions.removeUser()
+								let token=actions.isAuthenticated()
+							}}
+							>Cerrar sesión</button>
 							</div>
 						</div>
 						<div style={{ "width": "100%", "display": "flex", "justifyContent": "end" }}>
