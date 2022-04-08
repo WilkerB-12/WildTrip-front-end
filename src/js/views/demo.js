@@ -65,7 +65,7 @@ export const Demo = () => {
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Se recomienda usar mayúsculas y números para más seguridad 🔒</p>
 						<input 
 							placeholder="1234567890 🤡"
-							type="text"
+							type="password"
 							onChange={actions.handleInputChange}
 							name="password"
 							></input>
@@ -73,7 +73,7 @@ export const Demo = () => {
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Confírmanos tu contraseña 🔐</p>
 						<input 
 							placeholder=""
-							type="text"
+							type="password"
 							onChange={actions.handleInputChangePasswordConfirm}
 							name="password_confirm"						
 						></input>
