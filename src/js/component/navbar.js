@@ -1,11 +1,12 @@
 import React,{useContext} from "react";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import { Profile } from "../views/profile";
 import { Context } from "../store/appContext";
 
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+	const history=useHistory();
 	let token=actions.isAuthenticated()
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
@@ -48,6 +49,7 @@ export const Navbar = () => {
 							<button type="button" className="btn btn-light"
 							onClick={(e)=>{actions.removeUser()
 								let token=actions.isAuthenticated()
+								history.push("/")
 							}}
 							>Cerrar sesión</button>
 							</div>

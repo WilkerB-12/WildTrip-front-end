@@ -23,16 +23,8 @@ export const CreatePost = () => {
 							name="title"
 							onChange={actions.handleInputChangePost}
 						></input>
-						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Descripción de la publicación </h2>
-						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos una breve descripción de que va tu viaje, asi nuestros usuarios podran saber de que trata, y llames la atención 🍃🌴</p>
-						<input
-							placeholder=""
-							type="text"
-							name="description"
-							onChange={actions.handleInputChangePost}
-						></input>
 						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Nombre de tu compañía </h2>
-						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca el nombre de tu empresa🎒🍂</p>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aquí el nombre de tu empresa🎒🍂</p>
 						<input
 							placeholder=""
 							type="text"
@@ -40,7 +32,7 @@ export const CreatePost = () => {
 							onChange={actions.handleInputChangePost}
 						></input>
 						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Fecha </h2>
-						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca la fecha de tu aventura 📅</p>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aquí la fecha de tu aventura 📅</p>
 						<input
 							placeholder=""
 							type="text"
@@ -55,6 +47,17 @@ export const CreatePost = () => {
 							name="phone_number"
 							onChange={actions.handleInputChangePost}
 						></input>
+												<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Descripción de la publicación </h2>
+						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>Dejanos una breve descripción de que va tu viaje, asi nuestros usuarios podran saber de que trata, y llames la atención 🍃🌴</p>
+						<textarea
+							className="mb-3"
+							id="exampleFormControlTextarea1"
+							rows="3"
+							placeholder=""
+							type="text"
+							name="description"
+							onChange={actions.handleInputChangePost}
+						></textarea>
 						<h2 style={{ "paddingTop": "20px", "fontFamily": "Raleway, sans-serif" }}>Imagen de tu publicación </h2>
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}>coloca aca el link de una imagen que quieras poner en la publicación 📷🍃</p>
 						<input

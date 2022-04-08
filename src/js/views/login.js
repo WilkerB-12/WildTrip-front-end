@@ -27,6 +27,7 @@ return(
 						<p style={{ "fontSize": "20px", "fontFamily": "Nunito, sans-serif", "paddingTop": "20px" }}></p>
 						<input placeholder="1234567890 🤡"
 						name="password"
+						type="password"
 						onChange={actions.handleInputChange}
 						></input>
 						<input style={{ "width": "500px" }} className="my-3 btn btn-primary" 
