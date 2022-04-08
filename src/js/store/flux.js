@@ -164,9 +164,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getPosts: async()=>{
 				const response=await fetch(
 					`${getStore().baseUrl}/posts`
-				)
+				);
 				const body=await response.json();
+				body.reverse();
 				if (response.ok){
+
 					setStore({
 						all_post:body
 					})	

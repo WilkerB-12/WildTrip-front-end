@@ -19,7 +19,7 @@ export const Post = ({ item }) => {
                     <h5 className="card-title">{item.title}</h5>
                     <p className="card-text">{item.description}</p>
                     <p className="card-text">Teléfono de contacto {item.phone_number}</p>
-                    <p className="card-text">Fecha del viaje {item.date}</p>
+                    <p className="card-text">Fecha del viaje: {item.date}</p>
                 </div>
             </div>
         </div>
