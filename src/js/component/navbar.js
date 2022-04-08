@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Profile } from "../views/profile";
+import { Context } from "../store/appContext";
+
 
 export const Navbar = () => {
-	let token = false
+	let token = true
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<div className="d-flex mx-5" style={{ "width": "100vw" }}>
@@ -48,9 +50,9 @@ export const Navbar = () => {
 							</div>
 						</div>
 						<div style={{ "width": "100%", "display": "flex", "justifyContent": "end" }}>
-							<Link to="/profile">
+							<Link to={"/profile/" + localStorage.getItem("user_id")}>
 								<div className="foto_de_perfil_navbar">
-									<img src={"url + `${item.id}.jpg`"} />
+										<img className="foto_de_perfil_navbar" src={"https://pbs.twimg.com/profile_images/1410575489681571840/AyfTF5db_400x400.jpg"} />
 								</div>
 							</Link>
 						</div>

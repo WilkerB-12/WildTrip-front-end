@@ -40,7 +40,7 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
-						<Route exact path="/profile">{/*Falta poner el int:id*/}
+						<Route exact path={"/profile/" + localStorage.getItem("user_id")}>
 							<Profile/>
 						</Route>
 						<Route exact path="/create-post">

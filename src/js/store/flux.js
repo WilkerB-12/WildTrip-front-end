@@ -136,6 +136,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			   // save your token in the localStorage
 			  //also you should set your user into the store using the setStore function
 			    localStorage.setItem("jwt-token", data.token)
+				localStorage.setItem("user_id", data.user_id)
 				setStore({post:{...getStore().post,user_id:data.user_id}})
 			    return data
 			},
