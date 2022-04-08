@@ -9,7 +9,7 @@ export const Navbar = () => {
 	const history=useHistory();
 	let token=actions.isAuthenticated()
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-light mb-0">
 			<div className="d-flex mx-5" style={{ "width": "100vw" }}>
 
 				<Link to="/">
